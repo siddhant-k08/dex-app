@@ -59,4 +59,26 @@ contract Exchange is ERC20 {
         
         return lpTokensToMint;
     }
+
+    // removeLiquidity allows users to remove liquidity from the exchange
+    function removeLiquidity(uint256 amountOfLPTokens) public returns(uint256, uint256) {
+        // Check that the user wants to remove >0 LP tokens
+        require(
+            amountOfLPTokens > 0, "Amount of tokens to remove must be greater than 0"
+        );
+
+        uint256 ethReserveBalance = address(this).balance;
+        uint256 lpTokenTotalSupply = totalSupply();
+
+        // Calculate the amount of ETH and tokens to return to the user
+        uint256 ethToReturn = (ethReserveBalance * amountOfLPTokens)/lpTokenTotalSupply;
+        uint256 tokenToReturn = (getReserve()*amountOfLPTokens)/lpTokenTotalSupply;
+
+        // Burn the LP tokens from the user, and transfer the ETH and tokens to the user
+        _burn(msg.sender).transfer(ethToReturn);
+        ERC20(tokenAddress).transfer(msg.sender, tokenToReturn);
+
+        return (ethToReturn, tokenToReturn);
+    }
+    
 }
