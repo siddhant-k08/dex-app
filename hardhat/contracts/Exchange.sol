@@ -117,11 +117,11 @@ contract Exchange is ERC20 {
 
     // tokenToETHSwap allows users to swap tokens for ETH
     function tokenToEthSwap(
-        uint256 tokenToSwap,
+        uint256 tokensToSwap,
         uint256 minEthToReceive) public {
             uint256 tokenReserveBalance = getReserve();
             uint256 ethToReceive = getOutputAmountFromSwap(
-                tokenToSwap,
+                tokensToSwap,
                 tokenReserveBalance,
                 address(this).balance
             );
@@ -130,5 +130,13 @@ contract Exchange is ERC20 {
                 ethToReceive >= minEthToReceive,
                 "ETH received is less than minimum ETH expected"
             );
+
+            ERC20(tokenAddress).transferFrom(
+                msg.sender,
+                address(this),
+                tokensToSwap
+            );
+
+            payable(msg.sender).transfer(ethToReceive);
         }
 }
