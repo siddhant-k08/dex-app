@@ -75,9 +75,10 @@ contract Exchange is ERC20 {
         uint256 tokenToReturn = (getReserve()*amountOfLPTokens)/lpTokenTotalSupply;
 
         // Burn the LP tokens from the user, and transfer the ETH and tokens to the user
-        _burn(msg.sender).transfer(ethToReturn);
+        _burn(msg.sender, amountOfLPTokens);
+        payable(msg.sender).transfer(ethToReturn);
         ERC20(tokenAddress).transfer(msg.sender, tokenToReturn);
-
+    
         return (ethToReturn, tokenToReturn);
     }
 
@@ -112,7 +113,7 @@ contract Exchange is ERC20 {
             "Tokens received are less than minimum tokens expected"
         );
 
-        ERC20(tokensAddress).transfer(msg.sender, tokensToReceive);
+        ERC20(tokenAddress).transfer(msg.sender, tokensToReceive);
     }
 
     // tokenToETHSwap allows users to swap tokens for ETH
@@ -140,3 +141,8 @@ contract Exchange is ERC20 {
             payable(msg.sender).transfer(ethToReceive);
         }
 }
+
+// Exchange deployed to: 0xb80a8107045B6586B63d6f62Ead4af7F12DF41Bf
+
+// Successfully verified contract Exchange on the block explorer.
+// https://sepolia.etherscan.io/address/0xb80a8107045B6586B63d6f62Ead4af7F12DF41Bf#code  
