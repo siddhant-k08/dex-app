@@ -4,6 +4,11 @@ pragma solidity ^0.8.18;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract Exchange is ERC20 {
+
+    event liquidityAdded(uint256 lpTokensToMint);
+    event ethSwapped(uint256 tokensToReceive);
+    event swappedToEth(uint256 tokensToSwap);
+
     address public tokenAddress;
 
     // Exchange is inheriting ERC20, because our exchange itself is an ERC-20 contract
@@ -57,6 +62,8 @@ contract Exchange is ERC20 {
         // Mint LP tokens to the user
         _mint(msg.sender, lpTokensToMint);
         
+        emit liquidityAdded(lpTokensToMint);
+         
         return lpTokensToMint;
     }
 
@@ -114,6 +121,8 @@ contract Exchange is ERC20 {
         );
 
         ERC20(tokenAddress).transfer(msg.sender, tokensToReceive);
+
+        emit ethSwapped(tokensToReceive);
     }
 
     // tokenToETHSwap allows users to swap tokens for ETH
@@ -139,10 +148,10 @@ contract Exchange is ERC20 {
             );
 
             payable(msg.sender).transfer(ethToReceive);
+            emit swappedToEth(tokensToSwap);
         }
 }
 
-// Exchange deployed to: 0xb80a8107045B6586B63d6f62Ead4af7F12DF41Bf
-
+// Exchange deployed to: 0x1e9B7D37394D88C7652C9FDeDAEfC76F3e1757bB
 // Successfully verified contract Exchange on the block explorer.
-// https://sepolia.etherscan.io/address/0xb80a8107045B6586B63d6f62Ead4af7F12DF41Bf#code  
+//https://sepolia.etherscan.io/address/0x1e9B7D37394D88C7652C9FDeDAEfC76F3e1757bB#code

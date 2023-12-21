@@ -10,7 +10,7 @@ contract Token is ERC20 {
     }
 }
 
-// Token deployed to: 0x843FDf03c9Bf59814b2b0E28C40bD93270b6b681
+// Token deployed to: 0xc75Eb08B9fa2Ec6E2850B2116858587088f2724a
 
-// The contract 0x843FDf03c9Bf59814b2b0E28C40bD93270b6b681 has already been verified.
-// https://sepolia.etherscan.io/address/0x843FDf03c9Bf59814b2b0E28C40bD93270b6b681#code
+//Successfully verified contract Token on the block explorer.
+//https://sepolia.etherscan.io/address/0xc75Eb08B9fa2Ec6E2850B2116858587088f2724a#writeContract
