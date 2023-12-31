@@ -547,7 +547,7 @@ export default function Home() {
       
       <>
       <div><br/>
-        Token Info:{
+        Previous Token Swap Info:{
           swappedToEths!==null && swappedToEths.length>0 && swappedToEths.map((swappedToEths)=>{
               return(
                 <div class="lauda">
