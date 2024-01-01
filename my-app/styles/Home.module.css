@@ -103,6 +103,16 @@
   margin-left: 15%;
 }
 
+.lassan {
+  background-color: #8458B3;
+  font-size: medium;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 15%;
+}
+
 @media (max-width: 1000px) {
   .main {
     width: 100%;

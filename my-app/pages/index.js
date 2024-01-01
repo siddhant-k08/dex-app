@@ -546,8 +546,11 @@ export default function Home() {
       </div>
       
       <div className={styles.line}><br/>
+      <div className={styles.lassan}>
+        Previous Token Swap Info:<br/>
+      </div>
       <div className={styles.lauda}>
-        Previous Token Swap Info:<br/>{
+        <br/>{
           swappedToEths!==null && swappedToEths.length>0 && swappedToEths.map((swappedToEths)=>{
               return(
                 <div>
