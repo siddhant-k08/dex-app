@@ -541,19 +541,19 @@ export default function Home() {
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src="./cryptodev.svg" />
+          <img className={styles.image} src="./cryptodev.svg" /><br/>
         </div>
       </div>
       
-      <>
-      <div><br/>
-        Previous Token Swap Info:{
+      <div className={styles.line}><br/>
+      <div className={styles.lauda}>
+        Previous Token Swap Info:<br/>{
           swappedToEths!==null && swappedToEths.length>0 && swappedToEths.map((swappedToEths)=>{
               return(
-                <div class="lauda">
-                <div>{swappedToEths.id}</div><br></br>
+                <div>
+                <br></br><div>{swappedToEths.id}</div><br></br>
                 <div>{swappedToEths.tokensToSwap}</div><br/>
-                <div>{swappedToEths.transactionHash}</div>
+                <div>{swappedToEths.transactionHash}</div><br/>
                 </div>
                 /* <div class="tab"><br></br>
                   <p class="lauda">lauda lassan</p>
@@ -566,7 +566,7 @@ export default function Home() {
         }
       </div>
       
-      </>
+      </div>
 
       <footer className={styles.footer}>
         Made with &#10084; by Siddhant

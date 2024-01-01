@@ -4,7 +4,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.line{
+  border-top: 1px solid #eaeaea;
 }
 
 .footer {
@@ -26,7 +30,7 @@
   height: 100%;
   padding: 1%;
   margin: 2%;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
 }
 
@@ -84,7 +88,9 @@
 }
 
 .lauda {
-  font-size: xx-large;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 15%;
 }
 @media (max-width: 1000px) {
   .main {
