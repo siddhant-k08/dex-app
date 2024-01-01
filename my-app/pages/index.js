@@ -512,7 +512,7 @@ export default function Home() {
       <Head>
         <title>Exchange</title>
         <meta name="description" content="Whitelist-Dapp" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/cryptodev.png" />
       </Head>
       <div className={styles.main}>
         <div>
@@ -541,7 +541,7 @@ export default function Home() {
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src="./cryptodev.svg" /><br/>
+          <img className={styles.image} src="./cryptodev.png" /><br/>
         </div>
       </div>
       
@@ -555,12 +555,6 @@ export default function Home() {
                 <div>{swappedToEths.tokensToSwap}</div><br/>
                 <div>{swappedToEths.transactionHash}</div><br/>
                 </div>
-                /* <div class="tab"><br></br>
-                  <p class="lauda">lauda lassan</p>
-                  <div>ID:<div>{swappedToEths.id}</div></tr>
-                  <br></br><tr>TokensToSwap:<div>{swappedToEths.tokensToSwap}</div></tr>
-                  { <br></br><tr>Hash:<div>{swappedToEths.transactionHash}</div></tr>
-                </div> */
               )
           })
         }
