@@ -484,14 +484,14 @@ export default function Home() {
   const QueryURL = "https://api.studio.thegraph.com/query/55877/dexapp/version/latest"
   const query = `{
     swappedToEths(first: 5) {
-      id
       tokensToSwap
       transactionHash
+      blockNumber
     }
     ethSwappeds(first: 5) {
-      id
       tokensToReceive
       transactionHash
+      blockNumber
     }
   }`
 
@@ -551,9 +551,9 @@ export default function Home() {
           swappedToEths!==null && swappedToEths.length>0 && swappedToEths.map((swappedToEths)=>{
               return(
                 <div>
-                <br></br><div>{swappedToEths.id}</div><br></br>
-                <div>{swappedToEths.tokensToSwap}</div><br/>
-                <div>{swappedToEths.transactionHash}</div><br/>
+                <br></br><div>Block Number: {swappedToEths.blockNumber}</div><br></br>
+                <div>Number of Tokens: {swappedToEths.tokensToSwap}</div><br/>
+                <div>Transaction Hash: {swappedToEths.transactionHash}</div><br/>
                 </div>
               )
           })
