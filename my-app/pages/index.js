@@ -347,12 +347,12 @@ export default function Home() {
         <div>
           <div className={styles.description}>
             You have:
-            <br />
+            <br /><br />
             {/* Convert the BigNumber to string using the formatEther function from ethers.js */}
             {utils.formatEther(cdBalance)} Dex Tokens
-            <br />
+            <br /><br />
             {utils.formatEther(ethBalance)} Ether
-            <br />
+            <br /><br />
             {utils.formatEther(lpBalance)} LP tokens
           </div>
           <div>
