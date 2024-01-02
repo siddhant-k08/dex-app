@@ -349,11 +349,11 @@ export default function Home() {
             You have:
             <br />
             {/* Convert the BigNumber to string using the formatEther function from ethers.js */}
-            {utils.formatEther(cdBalance)} Crypto Dev Tokens
+            {utils.formatEther(cdBalance)} Dex Tokens
             <br />
             {utils.formatEther(ethBalance)} Ether
             <br />
-            {utils.formatEther(lpBalance)} Crypto Dev LP tokens
+            {utils.formatEther(lpBalance)} LP tokens
           </div>
           <div>
             {/* If reserved CD is zero, render the state for liquidity zero where we ask the user
