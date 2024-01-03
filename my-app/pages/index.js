@@ -108,7 +108,6 @@ export default function Home() {
       // Convert the amount entered by the user to a BigNumber using the `parseEther` library from `ethers.js`
       const swapAmountWei = utils.parseEther(swapAmount);
       // Check if the user entered zero
-      // We are here using the `eq` method from BigNumber class in `ethers.js`
       if (!swapAmountWei.eq(zero)) {
         const signer = await getProviderOrSigner(true);
         setLoading(true);
@@ -140,7 +139,6 @@ export default function Home() {
       // Convert the amount entered by the user to a BigNumber using the `parseEther` library from `ethers.js`
       const _swapAmountWEI = utils.parseEther(_swapAmount.toString());
       // Check if the user entered zero
-      // We are here using the `eq` method from BigNumber class in `ethers.js`
       if (!_swapAmountWEI.eq(zero)) {
         const provider = await getProviderOrSigner();
         // Get the amount of ether in the contract
