@@ -555,6 +555,7 @@ export default function Home() {
                 <br></br><div>Block Number: {swappedToEths.blockNumber}</div><br></br>
                 <div>Number of Tokens: {swappedToEths.tokensToSwap}</div><br/>
                 <div>Transaction Hash: {swappedToEths.transactionHash}</div><br/>
+                <div className={styles.whiteLine}><br/></div>
                 </div>
               )
           })
