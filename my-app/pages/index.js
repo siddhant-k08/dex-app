@@ -510,7 +510,7 @@ export default function Home() {
       <Head>
         <title>Exchange</title>
         <meta name="description" content="Whitelist-Dapp" />
-        <link rel="icon" href="/cryptodev.png" />
+        <link rel="icon" href="/pfp.jpg" />
       </Head>
       <div className={styles.main}>
         <div>
