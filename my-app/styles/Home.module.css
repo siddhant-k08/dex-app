@@ -106,7 +106,7 @@
   font-size: 17px;
   font-weight: 500;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-left: 15%;
+  margin-left: 6%;
 }
 
 .lassan {
@@ -116,7 +116,7 @@
   font-size: 20px;
   font-weight: 700;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-left: 15%;
+  margin-left: 6%;
 }
 
 @media (max-width: 1000px) {

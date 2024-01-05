@@ -565,7 +565,7 @@ export default function Home() {
       </div>
 
       <footer className={styles.footer}>
-        Made with &#10084; by Siddhant
+        Made with &#10084; by siddhantk08.eth
       </footer>
     </div>
     
