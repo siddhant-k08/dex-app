@@ -545,7 +545,7 @@ export default function Home() {
       
       <div className={styles.line}><br/>
       <div className={styles.lassan}>
-        Previous Token Swap Info:<br/>
+        Previous Eth to Token Swap:<br/>
       </div>
       <div className={styles.lauda}>
         <br/>{
